@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>El Partido Grande</title>
+	<meta charset="utf-8">
+	<link href="resources/main.css" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Neuton|Antic+Didone|Mate+SC" rel="stylesheet">
+</head>
+<body>
+
+	
+	<div id="startpage" style="display: block">
+		<div id="start_title">EL PARTIDO GRANDE</div>
+		<div id="startpage-content" style="top: 5000px">
+			<div style="font-size: 50px;">ENTRE SU NOMBRE</div>
+			<input id="enteryourname" maxlength="25" value="" type="text" />
+			<button onclick="comenzar()" style="margin-top: 5px;font-size: 60px; width: 95%">COMENZAR</button>
+			
+		</div>
+	</div>
+	<div id="loadingscreen" style="display: none">
+		<div id="loadingscreen-content" style="">
+			<div class="venezuelamap"></div>
+			<div id="loadingscreenStage1" class="venezuelamap venezuelamap1">
+				<div id="loadingscreenButton1" class="loadingbutton" style="top: 53px; left: 93px;"></div></div>
+			<div id="loadingscreenStage2" class="venezuelamap venezuelamap2" style="display: none">
+				<div id="loadingscreenButton2" class="loadingbutton" style="top: 67px; left: 179px;"></div></div>
+			<div id="loadingscreenStage3" class="venezuelamap venezuelamap3" style="display: none">
+				<div id="loadingscreenButton3" class="loadingbutton" style="top: 65px; left: 310px;"></div></div>
+			<div id="loadingscreenStage4" class="venezuelamap venezuelamap4" style="display: none">
+				<div id="loadingscreenButton4" class="loadingbutton" style="top: 72px; left: 425px;"></div></div>
+			<div id="loadingscreenStage5" class="venezuelamap venezuelamap5" style="display: none">
+				<div id="loadingscreenButton5" class="loadingbutton" style="top: 111px; left: 483px;"></div></div>
+			<a href="culture.html" target="_blank"><button id="culturebutton">Deseo ver la cultura de las ciudades.</button></a>
+		</div>
+	</div>
+	
+	<div id="stage">
+		<div id="stageContent" style=" width: 0px; height: 0px;">
+			<div id="stageDay">Queda día: <span id="dayleft">100</span>%<span id="stageDayLeft"></span></div>
+			<div id="stageCity" class="stageTitle" style="font-size: 80px">Maracaibo</div>
+			<div id="stageCountry" class="stageTitle" style="font-size: 40px">Venezuela</div>
+			<div id="stageHeader">
+				<div id="stageDate">miércoles, 3 mayo 2017</div>
+			</div>
+			<hr /><hr />
+			<div id="stageText">
+				<div class="stageSidebar"><div  style="width: 97%;">
+					<div id="hoteles">
+						<div class="stageHeader2">Hoteles</div>
+						<div class="stageSidebarInfo">
+							<div class="stageHeader3"></div>
+							<div class="starb star1"></div>
+							<div class="stageHeader4"></div>
+							<button onclick="player.gosleep(0)">Dormirse Aquí</button>
+						</div>
+						<div class="stageSidebarInfo">
+							<div class="stageHeader3"></div>
+							<div class="starb star2"></div>
+							<div class="stageHeader4"></div>
+							<button onclick="player.gosleep(1)">Dormirse Aquí</button>
+						</div>
+						<div class="stageSidebarInfo">
+							<div class="stageHeader3"></div>
+							<div class="starb star3"></div>
+							<div class="stageHeader4"></div>
+							<button onclick="player.gosleep(2)">Dormirse Aquí</button>
+						</div>
+						<div class="stageSidebarInfo">
+							<div class="stageHeader3"></div>
+							<div class="starb star4"></div>
+							<div class="stageHeader4"></div>
+							<button onclick="player.gosleep(3)">Dormirse Aquí</button>
+						</div>
+						<div class="stageSidebarInfo">
+							<div class="stageHeader3"></div>
+							<div class="starb star5"></div>
+							<div class="stageHeader4"></div>
+							<button onclick="player.gosleep(4)">Dormirse Aquí</button>
+						</div>
+						<div class="stageSidebarInfo">
+							<div class="stageHeader3">La Calle</div>
+							<div class="stageHeader4"></div>
+							<button onclick="player.gosleep(5)">Dormirse Aquí</button>
+						</div>
+					</div>
+					<div id="travel">
+						<div class="stageHeader2">Viajar a <span id="thenextcity"></span></div>
+						<div class="stageSidebarInfo">
+							<div class="stageHeader3"></div>
+							<div class="stageHeader4"></div>
+							<button onclick="player.question(0)">Salir</button>
+						</div>
+						<div class="stageSidebarInfo">
+							<div class="stageHeader3"></div>
+							<div class="stageHeader4"></div>
+							<button onclick="player.question(1)">Salir</button>
+						</div>
+						<div class="stageSidebarInfo">
+							<div class="stageHeader3"></div>
+							<div class="stageHeader4"></div>
+							<button onclick="player.question(2)">Salir</button>
+						</div>
+						<div class="stageSidebarInfo">
+							<div class="stageHeader3"></div>
+							<div class="stageHeader4"></div>
+							<button onclick="player.question(3)">Salir</button>
+						</div>
+					</div>
+				</div></div>
+				<div id="stage-main" class="stageMain"><div id="stageStory" style="width: 95%; padding: 5px; border-left: 1px solid #222; border-right: 1px solid #222;"></div></div>
+				<div class="stageSidebar">
+					<div class="stageHeader2">Trabajos</div>
+					<div id="trabajos"></div>
+					<div class="stageHeader2">Casino</div>
+					<p>Pruebas tu suerte en el casino, donde sueños vienen verdad.</p>
+					<button onclick="casino._open(true)">Entrar el Casino</button>
+				</div>
+			</div>
+		</div>
+		<div id="question" style="display: none">
+			<div id="questionQuestion">pregunta</div>
+			<input id="questionTravel" type="hidden" value="0" />
+			<div id="questionAnswers">
+				<div id="questionAnswer0" onclick="player.questionAnswer(0)" class="questionAnswer">respuesta</div>
+				<div id="questionAnswer1" onclick="player.questionAnswer(1)" class="questionAnswer">respuesta</div>
+				<div id="questionAnswer2" onclick="player.questionAnswer(2)" class="questionAnswer">respuesta</div>
+			</div>
+			<div id="questionResponse"></div>
+		</div>
+		<div id="casino" style="display: none">
+			<div id="casinoContent">
+			<div id="casinoHeader"><button onclick="casino._open(false)">Salir el Casino</button> Dinero en efectivo: <span id="casinoPlayerMoney"></span></div>
+			<hr />
+			<div id="casinoMain">
+				<div class="casinoHeader1">Juegos:</div>
+				<div style="padding-top: 15px;">
+					<div class="casinoGameRow">
+						<div class="casinoGameContainer" onclick="casino._openGame(0)">
+							<div class="casinoGameSelector">
+								Tragamonedas<br />
+								<div class="slotsimg"></div>
+							</div>
+						</div>
+						<div class="casinoGameContainer" onclick="casino._openGame(1)">
+							<div class="casinoGameSelector">
+								Blackjack
+								<div class="blackjackimg"></div>
+							</div>
+						</div>
+						<!--
+						<div class="casinoGameContainer">
+							<div class="casinoGameSelector">
+								Poker Video
+							</div>
+						</div>
+						<div class="casinoGameContainer">
+							<div class="casinoGameSelector">
+								Baccarat
+							</div>
+						</div>
+						<div class="casinoGameContainer">
+							<div class="casinoGameSelector">
+								Craps
+							</div>
+						</div>
+						!-->
+					</div>
+					<!--
+					<div class="casinoGameRow">
+						<div class="casinoGameContainer">
+							<div class="casinoGameSelector">
+								Roulette
+							</div>
+						</div>
+					</div>
+					!-->
+				</div>
+			</div>
+			<div id="casinoSlots" style="display: none">
+				<div><button onclick="casino._unloadGame(0)">Volver al piso</button></div>
+				<div>
+					<div id="slotsJackpotContainer">El Premio Gordo: <span id="slotsJackpot"></span></div>
+					<div id="slotsMachineContainer">
+						<div id="slotsMachineColumn0" class="slotsMachineColumn"></div>
+						<div id="slotsMachineColumn1" class="slotsMachineColumn"></div>
+						<div id="slotsMachineColumn2" class="slotsMachineColumn" style="margin-right: 0"></div>
+					</div>
+					<div id="slotsControls">
+						<div id="slotsControlsMenu"  class="casinoControls"  style="display: block">
+							
+							Apuesta: <span id="slotsControlsApuesta"></span><br />
+							<button onclick="casino.gameControl[0]._spin()">Spin</button>
+						</div>
+						<div id="slotsControlsResult" style="display: none">
+							¡Ganas!
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="casinoBlackjack" style="display: none">
+				<div><button onclick="casino._unloadGame(1)">Volver al piso</button> <span id="blackjackCardCount"></span></div>
+				<div>
+					<div id="blackjackDealer">
+					</div>
+					<div id="blackjackPlayer">
+					</div>
+					<div id="blackjackControls">
+						<div id="blackjackControlsMenu" class="casinoControls" style="display: block">
+							
+							Apuesta: <span id="blackjackControlsApuesta"></span><br />
+							<button onclick="casino.gameControl[1]._bet(true)">Subir Apuesta</button>
+							<button onclick="casino.gameControl[1]._bet(false)">Bajar Apuesta</button><br />
+							<button onclick="casino.gameControl[1]._deal()">Deal</button>
+						</div>
+						<div id="blackjackControlsGame" style="display: none">
+							<button onclick="casino.gameControl[1]._hit(true)">Hit</button>
+							<button onclick="casino.gameControl[1]._stand()">Stand</button>
+							<!--
+							u can use this but its kind of broken so like be careful
+							<button onclick="casino.gameControl[1]._split()">Split</button>
+							!-->
+							<button onclick="casino.gameControl[1]._double()">Double</button>
+						</div>
+						<div id="blackjackControlsResult" style="display: none">
+							¡Ganas!
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="endscreen" style="display: none">
+		<div id="endscreenPadding">
+			<div id="endscreenTitle">EL FIN</div>
+			<div id="endscreenResulto">¿Tuviste éxito?<br /><span id="endscreenResult"></span><br />Por <span id="endscreenDays"></span> día(s)</div></div>
+			<div id="endscreenStatistics">
+				<div>Las Estadísticas</div>
+				<div>
+					<div id="endscreenLeft">
+						<div class="leftThing" style="text-align: right">
+							<div>Dinero Ganado:</div>
+							<div>Dinero Gastado:</div>
+							<div>Dinero Perdido:</div>
+							<div>Veces Robado:</div>
+							<div>Trabajos Trabajaste:</div>
+							<div>Compraste un carro:</div>
+							<div>Accidentes del carro:</div>
+							<div>.</div>
+
+							<div>Días en Maracaibo:</div>
+							<div>Días en Barquisimeto:</div>
+							<div>Días en Caracas:</div>
+							<div>Días en Barcelona:</div>
+							<div>Días en Maturín:</div>
+							<div>Días en viajo:</div>
+						</div><div class="leftThing">
+							<div>BsF.<span id="stat-moneyEarned">0</span></div>
+							<div>BsF.<span id="stat-moneySpent">0</span></div>
+							<div>BsF.<span id="stat-moneyLossed">0</span></div>
+							<div><span id="stat-timesRobbed">0</span></div>
+							<div><span id="stat-jobsWorked">0</span></div>
+							<div><span id="stat-carBought">0</span></div>
+							<div><span id="stat-carAccidents">0</span></div>
+							<div>.</div>
+							<div><span id="stat-days0">0</span></div>
+							<div><span id="stat-days1">0</span></div>
+							<div><span id="stat-days2">0</span></div>
+							<div><span id="stat-days3">0</span></div>
+							<div><span id="stat-days4">0</span></div>
+							<div><span id="stat-days5">0</span></div>
+							
+						</div>
+					</div>
+					<div id="endscreenRight">
+						<div class="rightThing" style="text-align: right">
+							<div><strong>Casino</strong></div>
+							<div>Dinero Ganado:</div>
+							<div>Premios Gordos:</div>
+							<div>Spins de Las Tragamonedas:</div>
+							<div>Blackjacks:</div>
+							<div>.</div>
+							<div>.</div>
+							<div>.</div>
+							<div>.</div>
+							<div>.</div>
+							<div>.</div>
+						</div>
+						<div class="rightThing" style="width: 150px">
+							<div>.</div>
+							<div>BsF.<span id="stat-casinoMoneyWon">0</span></div>
+							<div><span id="stat-casinoJackpots">0</span></div>
+							<div><span id="stat-casinoSpins">0</span></div>
+							<div><span id="stat-casinoBlackjacks">0</span></div>
+							<div>.</div>
+							<div>.</div>
+							<div>.</div>
+							<div>.</div>
+							<div>.</div>
+							<div>.</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- background music !-->
+	<audio id="bgmusic" loop autoplay>
+		<source src="" type="audio/mpeg"/>
+	</audio>
+	<div id="bgmusicControl">
+		<input type="range" min="0" max="100" step="1" oninput="ele.bgmusic.volume = (this.valueAsNumber / 100)" value="100">
+	</div>
+	
+	
+	<div id="panel" style="display: none">
+		<div id="panelToggle" style="display: block">
+			<div style="display: inline-block; width: 92px; text-align: right;">
+				<div>Nombre: </div>
+			</div>
+			<div style="display: inline-block;padding-left: 5px;">
+				<div><span id="name">Maximum of 25 characters.</span></div>
+			</div>
+		</div>
+		<div id="panelContent" style="display: none">
+			<div style="float: left; width: 92px; text-align: right; height: 165px;">
+				<div>Bolívares: </div>
+				<div>Hoy: </div>
+				<div>Partido: </div>
+				<div>Queda: </div>
+			</div>
+			<div style="float: left;padding-left: 5px;">
+				
+				<div><span id="money">200.00</span></div>
+				<div><span id="currentday">3 mayo 2003</span></div>
+				<div><span id="gameday">17 julio 2003</span></div>
+				<div><span id="daysleft">5 días</span></div>
+				<div>Buena suerte</div>
+			</div>
+		</div>
+	</div>
+	<script src="resources/main.js?ver=nottheonethatiscached4" type="text/javascript"></script>
+	<script type="text/javascript">init()</script>
+</body>
+</html>

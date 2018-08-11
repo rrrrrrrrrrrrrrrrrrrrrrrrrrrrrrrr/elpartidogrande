@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>El Partido Grande</title>
+	<meta charset="utf-8">
+	<link href="resources/main.css" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Neuton|Antic+Didone|Mate+SC" rel="stylesheet">
+</head>
+<body>
+	<div id="stage">
+		<div id="stageContent" style=" width: 0px; height: 0px;">
+			<div id="stageCity" class="stageTitle" style="font-size: 80px">Maracaibo</div>
+			<div id="stageCountry" class="stageTitle" style="font-size: 40px">Venezuela</div>
+			<div id="stageText" style="text-align: center;">
+				<div id="stage-main" class="stageMain" style="float: inherit; display: inline-block"><div id="stageStory" style="width: 95%; padding: 5px; text-align: justify;"></div></div>
+			</div>
+			<div style="text-align: center">
+				<button onclick="(player.stage < 4) ? player.stage++ : player.stage = 0; stage._load(); paperFlip();" style="">La ciudad próximo</button>
+			</div>
+		</div>
+	</div>
+	<script src="resources/culture.js" type="text/javascript"></script>
+	<script type="text/javascript">init()</script>
+</body>
+</html>
