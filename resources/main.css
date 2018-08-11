@@ -1,0 +1,468 @@
+body {
+	margin: 0;
+	background: #add8e6;
+	font-family: neuton, arial;
+	transition: background 0.2s ease-in-out;
+}
+
+header {
+	position: fixed;
+	height: 50px;
+	width: 100%;
+	background: #202020;
+	color: #eee;
+}
+
+/* loading screen */
+.venezuelamap {
+	position: absolute;
+	width: 660px;
+	height: 500px;
+	background: url('venezuela.png');
+}
+
+.venezuelamap1 {
+	background: url('maracaibo.png');
+}
+
+.venezuelamap2 {
+	background: url('barquisimeto.png');
+}
+
+.venezuelamap3 {
+	background: url('caracas.png');
+}
+
+.venezuelamap4 {
+	background: url('barcelona.png');
+}
+
+.venezuelamap5 {
+	background: url('maturin.png');
+}
+
+.loadingbutton {
+	position: relative;
+	cursor: pointer;
+	width: 15px;
+	height: 15px;
+	/*background: rgba(250,134,95,0.5);*/
+}
+
+#culturebutton {
+	position: fixed;
+	bottom: 30px;
+	color: #eee;
+}
+
+#loadingscreen-content {
+	position: fixed;
+	top: 50px;
+}
+
+
+
+/* stage */
+button {
+	margin-top: 5px;
+	background: rgba(0,0,0,0.2);
+	border: 2px solid rgba(0,0,0,0.3);
+	padding: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background: rgba(0,0,0,0.1);
+}
+
+#stage {
+	overflow: hidden;
+	color: #222;
+}
+
+#stageContent {
+	display: block;
+	position: fixed;
+	width: 0px;
+	left: 2.5%;
+	top: 75px;
+	height: 0px;
+	background: #f8ecc2;
+	transition: width 0.5s, height 0.5s, transform 0.5s;
+	transform: rotate(0deg);
+	font-family: 'Antic Didone', arial;
+	font-weight: 800;
+	overflow-y: scroll;
+}
+
+#stageHeader {
+	padding-top: 15px;
+	text-align: center;
+}
+
+#stageDay {
+	text-align: right;
+}
+
+#stageCity, #stageCountry {
+	text-align: center;
+}
+
+.stageTitle {
+	font-family: 'Mate SC', arial;
+	font-weight: normal;
+	letter-spacing: 15px;
+}
+
+.stageSidebar {
+	float: left;
+	width: 25%;
+}
+
+.stageMain {
+	float: left;
+	width: 50%;
+}
+
+.stageHeader1 {
+	font-size: 40px;
+	text-align: left;
+}
+
+.stageHeader2 {
+	font-size: 35px;
+	text-align: left;
+}
+
+.stageHeader3 {
+	font-size: 25px;
+}
+
+.stageSidebarInfo {
+	padding-top: 10px;
+	padding-bottom: 15px;
+	transition: all 0.5s ease-in-out;
+}
+
+#stage hr {
+	border: 1px solid #222;
+}
+
+#stageText {
+	text-align: justify;
+}
+
+#stageImage1 {
+	width: 100%;
+	
+}
+
+.stageImageShowcase {
+	width: 75%;
+}
+
+.stageImageCaption {
+	width: 75%;
+	text-align: right;
+	padding-bottom: 30px;
+}
+
+.starb {
+	width: 140px;
+	height: 45px;
+}
+
+.star1 {
+	background: url('images/star1.png');
+	background-size: 140px;
+	background-repeat: no-repeat;
+}
+
+.star2 {
+	background: url('images/star2.png');
+	background-size: 140px;
+	background-repeat: no-repeat;
+}
+
+.star3 {
+	background: url('images/star3.png');
+	background-size: 140px;
+	background-repeat: no-repeat;
+}
+
+.star4 {
+	background: url('images/star4.png');
+	background-size: 140px;
+	background-repeat: no-repeat;
+}
+
+.star5 {
+	background: url('images/star5.png');
+	background-size: 140px;
+	background-repeat: no-repeat;
+}
+
+/* questiones */
+#question {
+	position: fixed;
+	top: 100px;
+	left: 50px;
+	width: 780px;
+	height: 500px;
+	background: #0080ff;
+	font-family: arial;
+	border: 4px outset #d96c00;
+	color: #eee;
+}
+
+#questionQuestion {
+	padding: 15px;
+	font-size: 25pt;
+}
+
+#questionAnswers {
+	text-align: center;
+}
+
+#questionResponse {
+	padding-top: 10px;
+	font-size: 80pt;
+	text-align: center;
+}
+
+.questionAnswer {
+	text-align: center;
+	width: 200px;
+	padding: 15px 5px;
+	border: 1px solid #eee;
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.questionAnswer:hover {
+	color: #fff;
+	font-weight: bold;
+	border-color: #fff;
+}
+
+
+/* casino casino */
+
+#casino {
+	position: fixed;
+	top: 100px;
+	width: 780px;
+	height: 500px;
+	background: #090;
+	font-family: arial;
+	border: 4px outset #b30000;
+	color: #eee;
+}
+
+#casinoContent {
+	padding: 15px;
+}
+
+.casinoGameContainer {
+	text-align: center;
+	width: 125px;
+	height: 125px;
+	background-color: rgba(0,0,0,0.7);
+	display: inline-block;
+	cursor: pointer;
+}
+
+.casinoGameContainer:hover {
+	background-color: rgba(0,0,0,0.6);
+}
+
+.casinoGameSelector {
+	padding: 10px;
+}
+
+.casinoGameRow {
+	color: #eee;
+	padding-bottom: 5px;
+}
+
+.blackjackimg {
+	display: inline-block;
+	width: 96px;
+	height: 96px;
+	background: url('images/blackjack.png');
+	background-size: 96px;
+}
+
+.blackjackCard {
+	background-size: 75px;
+	width: 0px;
+	height: 110px;
+	background-repeat: no-repeat;
+	display: inline-block;
+	transition: all 0.25s ease-in-out;
+}
+
+.blackjackHand {
+	display: inline-block;
+}
+.blackjackApuesta {
+	display: inline-block;
+}
+
+#blackjackDealer {
+	text-align: center;
+	padding-bottom: 25x;
+}
+
+#blackjackPlayer {
+	text-align: center;
+}
+
+#slotsJackpotContainer {
+	padding: 10px 0 0 0;
+}
+
+#slotsMachineContainer {
+	margin: auto;
+	width: 242px;
+	height: 170px;
+}
+
+.slotsMachineColumn {
+	width: 64px;
+	height: 165px;
+	border: 1px solid black;
+	margin-right: 16px;
+	background-color: orange;
+	display: inline-block;
+	background: url('images/sloticons.png') 0 -165px;
+}
+
+.casinoControls {
+	text-align: center;
+}
+
+
+.slotsimg {
+	display: inline-block;
+	width: 96px;
+	height: 96px;
+	background: url('images/slots.png');
+	background-size: 96px;
+}
+
+#casino button {
+	color: #eee;
+}
+
+/* the eennnddd ooo  nno o oooo */
+
+#endscreen {
+	position: fixed;
+	top: 100px;
+	left: 50px;
+	width: 780px;
+	height: 500px;
+	font-family: arial;
+	/*
+	background: #333;
+	border: 4px outset #111;
+	*/
+	color: #eee;
+}
+
+#endscreenPadding {
+	padding: 15px;
+}
+
+#endscreenTitle {
+	text-align: center;
+	font-size: 45pt;
+}
+
+#endscreenResulto {
+	text-align: center;
+	font-size: 25pt;
+	height: 80px;
+}
+
+#endscreenLeft {
+	display: inline-block;
+	width: 380px;
+}
+
+#endscreenRight {
+	display: inline-block;
+	width: 380px;
+}
+
+#endscreenStatistics {
+	padding-top: 35px;
+}
+
+.leftThing {
+	display: inline-block;
+	width: 170px;
+	padding-left: 10px;
+}
+
+.rightThing {
+	display: inline-block;
+	width: 225px;
+	
+}
+/* panels */
+#panel {
+	position: fixed;
+	top: 15px;
+	left: 15px;
+	background: rgba(0,0,0,0.8);
+	color: #eee;
+	border-radius: 5px;
+	font-size: 25px;
+	padding: 5px;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+#panelToggle:hover {
+	color: #ffd700;
+	cursor: pointer;
+}
+
+
+
+
+/* start page */
+#start_title {
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	top: 30px;
+	font-size: 0;
+	
+}
+
+#startpage-content {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	transition: all 0.8s ease-in-out;
+}
+
+#enteryourname {
+	font-size: 60px;
+	width: 95%;
+	line-height: 80px;
+	text-align: center;
+}
+
+
+/* misc */
+#bgmusicControl {
+	position: fixed;
+	top: 5px;
+	right: 10px;
+}
